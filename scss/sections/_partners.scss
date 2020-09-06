@@ -1,0 +1,26 @@
+.partners {
+    position: relative;
+    min-height: rem(133px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablets {
+        max-width: 94%;
+        margin: 0 3%;
+    }
+    @include phones {
+        min-height: rem(90px);
+    }
+    & img {
+        width: 94%;
+        margin: 0 3%;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        border: rem(1px) solid #ededed;
+        width: 100%;
+        bottom: 0;
+        
+    }
+}

@@ -1,0 +1,338 @@
+.projects {
+    padding: 0 rem(152px);
+    @include tablets {
+        padding: 0 rem(10px);
+    }
+}
+
+.featured-projects {
+    display: flex;
+    padding-top: rem(73px);
+    padding-left: rem(38px);
+    @include tablets {
+        padding-top: rem(65px);
+        padding-left: rem(20px);
+    }
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: rem(40px);
+        padding-left: 0;
+    }
+    &__wrap {
+        width: 70%;
+        @include tablets {
+            width: 65%;
+        }
+    }
+
+    &__title {
+        font-size: rem(29px);
+        font-weight: 600;
+        color: #515151;
+        letter-spacing: rem(1px);
+        @include tablets {
+            font-size: rem(27px);
+        }
+        @include phones {
+            font-size: rem(15px);
+        }
+    }
+    &__text {
+        font-size: rem(17px);
+        color: #8f8f8f;
+        padding-top: rem(22px);
+        line-height: 1.6;
+        @include tablets {
+            font-size: rem(15px);
+            padding-top: rem(18px);
+        }
+        @include phones {
+            font-size: rem(13px);
+            padding-top: rem(10px);
+        }
+    }
+    &__btn {
+        padding-top: rem(49px);
+        margin-left: rem(90px);
+        @include tablets {
+            padding-top: rem(30px);
+            margin-left: 0;
+        }
+    }
+}
+
+.project-btn {
+        display: inline-block;
+        text-align: center;
+        font-size: rem(17px);
+        font-weight: 600;
+        color: #515151;
+        opacity: 71%;
+        text-decoration: none;
+        border: rem(1px) solid #b6b6b6;
+        padding: rem(13px) rem(16px);
+        border-radius: rem(10px);
+        @include tablets {
+            font-size: rem(15px);
+        }
+        @include phones {
+            font-size: rem(13px);
+            padding: rem(10px) rem(13px);
+        }
+        &:hover {
+            background-color: #add136;
+            color: #ffffff;
+        }
+}
+
+.projects-list {
+    display: flex;
+    margin-top: rem(66px);
+    margin-left: rem(40px);
+    @include tablets {
+        flex-wrap: wrap;
+        margin-top: rem(50px);
+        margin-left: rem(10px);
+    }
+    @include phones {
+        flex-direction: column;
+        margin-left: 0;
+    }
+}
+
+.item {
+    width: 30%;
+    margin-left: rem(36px);
+    background-color: #f9f9f9;
+    border: rem(1px) solid #e9e9e9;
+    border-top: 0;
+    border-radius: rem(10px);
+    overflow: hidden;
+    @include tablets {
+        width: 45%;
+    }
+    @include phones {
+        width: 80%;
+        margin: 5% 10%;
+    }
+    
+    &:nth-child(2n+1) {
+        @include tablets {
+            margin-left: 0;
+        }
+        @include phones {
+            margin: 5% 10% 0 10%;
+        }
+    }
+    
+    &:nth-child(n+3) {
+        @include tablets {
+            margin-top: rem(20px);
+        }
+        @include phones {
+            margin-top: 0;
+        }
+    }
+    &__img {
+
+        &:after {
+            border-radius: rem(12px);
+        }
+        position: relative;
+        & img {
+          height: rem(227px);
+          width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: rem(17px);
+        font-weight: 700;
+        color: #484848;
+        margin-top: rem(22px);
+        margin-left: rem(21px);
+        letter-spacing: rem(1px);
+        @include phones {
+            margin-left: 0;
+            margin-top: rem(15px);
+            text-align: center;
+            font-size: rem(15px);
+        }
+    }
+    &__text {
+        font-size: rem(13px);
+        color: #484848;
+        font-weight: 400;
+        opacity: 71%;
+        max-width: rem(262px);
+        margin-top: rem(12px);
+        margin-left: rem(22px);
+        margin-right: rem(22px);
+        line-height: 1.6;
+        @include phones {
+            max-width: 94%;
+            margin: 3%;
+            text-align: center;
+        }
+
+    }
+    &__numbers {
+        display: flex;
+        justify-content: space-between;
+        padding-top: rem(20px);
+        position: relative;
+        @include phones {
+            padding-top: 0;
+            justify-content: center;
+            padding-left: 4%;
+        }
+        &:after {
+            content: '';
+            max-width: rem(253px);
+            width: 80%;
+            height: rem(1px);
+            background-color: #d6d6d6;
+            position: absolute;
+            margin: rem(30px) rem(25px);
+            @include phones {
+                width: 60%;
+            }
+        }
+}
+    &__percent {
+        font-size: rem(13px);
+        font-weight: 600;
+        color: #8d8d8d;
+        padding-left: rem(20px);
+        @include phones {
+            padding-left: 0;
+            font-size: rem(11px);
+        }
+    }
+    &__date {
+        font-size: rem(13px);
+        font-weight: 600;
+        color: #8d8d8d;  
+        padding-right: rem(20px);
+        @include phones {
+           font-size: rem(11px);
+        }
+    }
+
+    &__scale {
+        margin-top: rem(25px);
+        margin-left: rem(20px);
+        margin-right: rem(20px);
+        @include phones {
+            margin: 5% 15%;
+        }
+    }
+    
+}
+
+.gbp {
+    font-size: rem(16px);
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #26a6d1;
+    display: inline-block;
+    padding: rem(8px) rem(13px);
+    border-radius: rem(8px);
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    z-index: 10;
+    @include phones {
+        font-size: rem(14px);
+    }
+}
+
+.new {
+
+    
+        width: 0;
+        height: 0;
+        border-top: rem(72px) solid #add136;
+        border-right: rem(72px) solid transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 15;
+    
+
+    &__text {
+        font-size: rem(15px);
+        font-family: 'Montserrat';
+        color: #ffffff;
+        transform: rotate(-45deg);
+        text-transform: uppercase;
+        margin-top: rem(-40px);
+        margin-left: rem(10px);
+        @include phones {
+            font-size: rem(13px);
+        }
+    }
+}
+
+.parent {
+    max-width: rem(285px);
+    height: rem(14px);
+    background-color: #e3e3e3;
+    border-radius: rem(10px);
+    @include phones {
+        width: 100%;
+    }
+}
+
+.child {
+    height: 100%;
+    background-color: #add136;
+    width: 15%;
+    border-radius: rem(10px) 0 0 rem(10px);
+}
+
+.child-2 {
+    width: 69%;
+}
+
+.details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: rem(39px) rem(23px) rem(23px) 0;
+    @include phones {
+        margin: 8% 25% 5%;
+    }
+
+    &__text {
+
+        &-link {
+            font-size: rem(15px);
+            font-weight: 600;
+            opacity: 85%;
+            color: #484848;
+            text-decoration: none;
+            @include phones {
+               font-size: rem(13px);
+            }
+        }
+    }
+    &__triangle {
+         width: 0;
+         height: 0;
+         border: rem(10px) solid transparent;
+         border-left: rem(14px) solid #c0db65;
+         display: block;
+         margin-left: rem(12px);
+    }
+}
+
+
+  
+
+
+
+  
+  

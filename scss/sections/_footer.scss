@@ -1,0 +1,19 @@
+.footer {
+    height: rem(65px);
+
+    &__text {
+        font-size: rem(13px);
+        color: #848484;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-top: rem(25px);
+        @include tablets {
+            font-size: rem(11px);
+        }
+        @include phones {
+            margin-top: rem(15px);
+        }
+    }
+}

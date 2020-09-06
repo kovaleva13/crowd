@@ -1,0 +1,113 @@
+.slick-list {
+    overflow: hidden;
+}
+.slick-track {
+    display: flex;
+    
+}
+
+.slider {
+    position: relative;
+    padding-top: rem(85px);
+    @include tablets {
+        padding-top: rem(65px);
+    }
+    & .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        font-size: 0;
+        & .slick-prev {
+            left: 0;
+            
+        }
+        & .slick-next {
+            right: 0;
+            
+        }
+    }
+    &__item {
+        & img {
+            width: 100%;
+            max-height: rem(570px);
+        }
+    }
+    &__title {
+        position: absolute;
+        font-size: rem(49px);
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        letter-spacing: rem(1px);
+        line-height: 1.3;
+        top: 21.5%;
+        left: 15.5%;
+        max-width: rem(950px);
+        @include tablets {
+            font-size: rem(31px); 
+            line-height: 1.5;
+            top: 1%;
+            left: 13%;
+            max-width: rem(510px);
+        }
+        @include phones {
+            font-size: rem(17px);
+            top: 10%;
+            left: 6%;
+            max-width: 80%;
+        }
+        & span {
+            font-weight: 400;
+            font-size: rem(35px);
+            @include tablets {
+                font-size: rem(27px);
+            }
+            @include phones {
+                font-size: rem(17px);
+            }
+        }
+     }
+ 
+     &__btn {
+         position: absolute;
+         top: 62%;
+         left: 41%;
+        @include tablets {
+            top: 63%;
+            left: 34%;
+        }
+        @include phones {
+            top: 68%;
+            left: 50%;
+            margin-left: rem(-73px);
+        }
+     }
+    
+}
+
+.bg-btn {
+    display: inline-block;
+    font-size: rem(19px);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #99c50a;
+    border-radius: rem(10px);
+    padding: rem(23px) rem(43px);
+    &:hover {
+        background-color: #81a60a;
+    }
+    @include tablets {
+        font-size: rem(17px);
+    }
+    @include phones {
+        font-size: rem(13px);
+        padding: rem(9px) rem(13px);
+    }
+}
+
+
+  
+
+  
+  

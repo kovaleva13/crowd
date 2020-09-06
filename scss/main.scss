@@ -1,0 +1,22 @@
+@import "config/_normalize";
+
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+@import "config/_mixins";
+@import "layout/_fonts";
+@import "layout/_base";
+@import "layout/_adjustment";
+
+@import "sections/_header";
+@import "sections/_slider";
+@import "sections/_presentation";
+@import "sections/_tabs";
+@import "sections/_sign-up";
+@import "sections/_projects";
+@import "sections/_community";
+@import "sections/_partners";
+@import "sections/_footer";
+

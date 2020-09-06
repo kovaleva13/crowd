@@ -1,0 +1,199 @@
+.header {
+    position: fixed;
+    z-index: 1500;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f3f0f0;
+        z-index: 1404;
+    }
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: rem(85px);
+        width: 77%;
+        left: 11.5%;
+        @include tablets {
+            width: 95%;
+            left: 5%;
+            height: rem(65px);
+            justify-content: space-between;
+        }
+    }
+    &__logo {
+        padding-left: rem(8px);
+        z-index: 1404;
+        width: 21%;
+    }
+    &__burger {
+        display: none;
+        @include tablets {
+            display: block;
+		    width: rem(30px);
+		    height: rem(20px);
+		    position: relative;
+            z-index: 1430;
+            order: 1;
+            margin-right: 3%;
+        }
+        &.active span {
+            @include tablets {
+                transform: scale(0);  
+            }
+        }
+        &.active:before {
+            transform:rotate(45deg);
+		    top: rem(9px);
+        }
+        &.active:after {
+            transform:rotate(-45deg);
+		    bottom: rem(9px);
+        }
+        & span {
+            @include tablets {
+                position: absolute;
+                background-color: #666666;
+                opacity: 67%;
+                left: 0;
+                width: 100%;
+                height: rem(2px);
+                top: rem(9px);
+                transition: all 0.3s ease 0s;
+            }
+        }
+        &:before {
+            @include tablets {
+                content: '';
+                background-color: #666666;
+                opacity: 67%;
+                position: absolute;
+                width: 100%;
+                height: rem(2px);
+                left: 0;
+                transition: all 0.3s ease 0s;
+                top: 0;
+            }
+        }
+        &:after {
+            @include tablets {
+                content: '';
+                background-color: #666666;
+                opacity: 67%;
+                position: absolute;
+                width: 100%;
+                height: rem(2px);
+                left: 0;
+                transition: all 0.3s ease 0s;
+                bottom: 0;
+            }
+
+        }    
+    }
+    &__menu {
+        padding-left: rem(121px);
+        padding-top: rem(6px);
+        z-index: 1405;
+        @include tablets {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            transition: all 0.3s ease 0s;
+            background-color: #fff;
+            padding: rem(90px) rem(10px) rem(20px) rem(30px);
+        }
+        &.active {
+            @include tablets {
+                top: 0;
+            }
+        }
+    }
+    &__btn {
+        padding-left: rem(47px);
+        padding-top: rem(3px);
+        z-index: 1404;
+        @include tablets {
+            padding-left: 0;
+            margin-left: 45%;
+        }
+        @include phones {
+            margin-bottom: rem(7px);
+            margin-left: 30%;
+        }
+    }
+}
+
+.logo-wrapper img {
+    @include tablets {
+        width: 100%;
+    }
+    
+}
+
+.nav {
+   &__list {
+      display: flex;
+      position: relative;
+      @include tablets {
+          display: block;
+      }
+    }
+    &__item {
+        margin-right: rem(30px);
+        @include tablets {
+            margin-bottom: rem(10px);
+        }
+    }
+    &__link {
+        font-size: rem(13px);
+        font-weight: 600;
+        color:#666666;
+        opacity: 67%;
+        text-decoration: none;
+        @include tablets {
+            font-size: rem(17px);
+        }
+        @include phones {
+            font-size: rem(15px);
+        }
+        &:hover {
+            color: #add136;
+        }
+    }
+}
+
+.login-link {
+    display: inline-block;
+    font-size: rem(13px);
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #bcda5c;
+    text-decoration: none;
+    min-width: rem(100px);
+    padding: rem(10px) rem(30px);
+    border-radius: rem(25px);
+    @include phones {
+        font-size: rem(11px);
+        padding: 15% 40%;
+    }
+    &:hover {
+        background-color: #a0ba4f;
+    }
+}
+
+    
+
+
+  

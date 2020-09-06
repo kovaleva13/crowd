@@ -1,0 +1,84 @@
+.presentation {
+    min-height: rem(570px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 rem(170px);
+    
+    @include tablets {
+        margin: 0 rem(100px);
+    }
+    @include phones {
+        min-height: rem(480px);
+        margin: 0 rem(40px);
+    }
+    &__img {
+        padding-top: rem(100px);
+        padding-left: rem(75px);
+        @include tablets {
+            padding-left: 0;
+        }
+        & img {
+            @include phones {
+                width: 10%;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: rem(35px);
+        @include phones {
+            margin-top: rem(25px);
+        }
+    }
+
+    &__title {
+        font-size: rem(31px);
+        font-weight: 600;
+        color: #515151;
+        text-transform: uppercase;
+        letter-spacing: rem(1px);
+        line-height: 1.5;
+        margin-bottom: rem(54px);
+        max-width: 55%;
+        margin-left: 24%;
+        @include tablets {
+            font-size: rem(27px);
+            line-height: 1.3;
+            max-width: 80%;
+            margin-left: 10%;
+            margin-bottom: rem(34px);
+        }
+        @include phones {
+            font-size: rem(15px);
+            margin-bottom: rem(24px);
+        }
+    }
+    &__text {
+        font-size: rem(19px);
+        font-weight: 400;
+        color: #515151;
+        opacity: 71%;
+        line-height: 1.7;
+        padding: 0 rem(36px);
+        @include tablets {
+            font-size: rem(17px);
+            line-height: 1.5;
+        }
+        @include phones {
+            font-size: rem(13px);
+        }
+        & p {
+            padding-bottom: rem(35px);
+            @include tablets {
+                padding-bottom: rem(25px);
+            }
+        }
+        
+    }
+}
+
+
+
+  
